@@ -49,12 +49,6 @@ const ikan = ['🔥','🎲','🎭']
  let _buruan = JSON.parse(fs.readFileSync('./storage/user/hasil_buruan.json'));
  let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/darah.json'))
 
-//Database\\
-let setik = JSON.parse(fs.readFileSync('./database/setik.json'));
-let vien = JSON.parse(fs.readFileSync('./database/vien.json'));
-let imagi = JSON.parse(fs.readFileSync('./database/imagi.json'))
-let videox = JSON.parse(fs.readFileSync('./database/video.json'))
-
 
 //read database\\
 let tebaklagu = db.data.game.tebaklagu = []
