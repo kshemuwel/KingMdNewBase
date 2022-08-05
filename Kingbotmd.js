@@ -461,15 +461,8 @@ const reply = (teks) => {
             if (!m.key.fromMe) return
         }
 
-console.log(chalk.blueBright.italic('✅ Login information updated!')
-console.log(chalk.blueBright.italic('🎲LOGIN TO YOUR ACCOUNT'))
-console.log(chalk.blueBright.italic('[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] PUBLIC'))
-console.log(chalk.green.bold('✅ Login successful!')
-console.log(chalk.blueBright.italic('⬇️ Installing external plugins...')
-console.log(chalk.green.bold('✅ Plugins installed!')
-console.log(chalk.green.bold('✅ Connected!')
 
-
+console.log(chalk.black(chalk.bgWhite('✅ Login information updated!')),
 	
 	//reset limit every 12 hours\\
         let cron = require('node-cron')
