@@ -8915,7 +8915,7 @@ break
 case 'alive': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-KingmdWH.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+KingmdWH.sendMessage(from, { react: { text: "💝", key: m.key }})
 	                Kingbotalive = `─┈┈┈┄┄╌╌╌╌┄┄┈┈┈─
                    ✦𝙷𝙸 𝚃𝙷𝙴𝚁𝙴,࿐
             ꧁°•ɪ ᴀᴍ ᴀʟɪᴠᴇ ɴᴏᴡ•°꧂

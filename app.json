@@ -10,16 +10,6 @@
             "required": false,
             "value":"👋ʜɪ ᴅᴇᴀʀ ${pushname},\n🍃 ɪ ᴀᴍ ᴏɴʟɪɴᴇ ɴᴏᴡ 🍃\n\n✦ ᴛᴏ ɢᴇᴛ ꜰᴜʟʟ ᴄᴏᴍᴍᴀɴᴅ ʟɪꜱᴛ ᴛʏᴘᴇ .ᴍᴇɴᴜ ✦'"
         },
-            "HEROKU_APP_NAME": {
-            "description": "",
-            "required": true,
-            "value":""
-        },
-            "HEROKU_API_KEY": {
-            "description": "",
-            "required": true,
-            "value":""
-        },
             "BOT_NAME": {
             "description": "බොට්ගෙ නම...",
             "required": true,
