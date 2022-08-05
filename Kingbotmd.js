@@ -462,20 +462,8 @@ const reply = (teks) => {
         }
 
 
-console.log(chalk.black(chalk.bgWhite('✅ Login information updated!')),
-	
-	//reset limit every 12 hours\\
-        let cron = require('node-cron')
-        cron.schedule('00 12 * * *', () => {
-            let user = Object.keys(global.db.data.users)
-            let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
-            for (let jid of user) global.db.data.users[jid].limit = limitUser
-            console.log('Limit Reseted')
-        }, {
-            scheduled: true,
-            timezone: "Asia/Kolkata"
-        })
-        
+console.log(chalk.black(chalk.bgWhite('✅ Login information updated!'))
+
         //hitter
         global.hit = {}
 if (isCmd) {
