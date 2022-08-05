@@ -462,7 +462,7 @@ const reply = (teks) => {
         }
 
 
-console.log(chalk.black(chalk.bgWhite('✅ Login information updated!'))
+console.log('✅ Login information updated!')
 
         //hitter
         global.hit = {}
