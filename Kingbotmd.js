@@ -1492,7 +1492,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     case 'kingbug': {
                     	KingmdWH.sendMessage(`94729352830@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 Report Message: ${text}` })
-KingmdWH.sendMessage(m.chat, {text:'Yᴏᴜ\'ʀᴇ ᴇʟᴄᴏᴍᴇ'})
+KingmdWH.sendMessage(m.chat, {text:'💖 Yᴏᴜ\'ʀᴇ Wᴇʟᴄᴏᴍᴇ'})
                     }
             break
                      case 'alive': {
@@ -1527,7 +1527,7 @@ Kingbotalive = `─┈┈┈┄┄╌╌╌╌┄┄┈┈┈─
                 ]
                 let buttonMessage = {
                     image: fs.readFileSync('./src/bot.jpg'),
-                    caption: Kingbotinfo,
+                    caption: Kingbotalive,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     templateButtons: buttons,
                     headerType: 4
@@ -1696,8 +1696,7 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
 ⚡ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴
 ⚡ 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
 ⚡ 𝚉𝙾𝙾𝙼
-⚡ 𝙸𝙼𝙾
-⚡ 𝙽𝙴𝚃𝙵𝙸𝚇
+⚡ 𝚃𝙸𝙺𝚃𝙾𝙺
 ⚡ 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿
 
 ⚡️ 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0
@@ -1705,12 +1704,11 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
 
 
    🔰 ᴀɴʏ ᴡʜᴀᴛꜱᴀᴘᴘ  - .wehi
+   🔰 ᴀɴʏ ᴛɪᴋᴛᴏᴋ  - .ttehi
+   🔰 ᴀɴʏ ᴛᴡɪᴛᴛᴇʀ  - .twehi
    🔰 ᴀɴʏ ꜰᴀᴄᴇʙᴏᴏᴋ - .fehi
    🔰 ᴀɴʏ ᴢᴏᴏᴍ - .zehi
-   🔰 ᴅ - ᴢᴏᴏᴍ - .dzehi
    🔰 ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ - .yehi
-   🔰 ᴀɴʏ ɴᴇᴛꜰʟɪx - .nfehi
-   🔰 ᴀɴʏ ɪᴍᴏ - .iehi
 
    🔰 𝙰𝙸𝚁𝚃𝙴𝙻 0 - .a0ehi
    🔰 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0 - .m0ehi
@@ -1837,7 +1835,7 @@ Ex - ( Dialog zoom *Rs- 165  )
                 ]
                 let buttonMessage = {
                     image: fs.readFileSync('./src/bot.jpg'),
-                    caption: Kingbotinfo,
+                    caption: Ehiusekingbot,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     templateButtons: buttons,
                     headerType: 4
@@ -2207,6 +2205,36 @@ case 'antispam': {
   KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/TLS%20Tunnel%20.apk' }, fileName : 'TLS Tunnel.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'fehi': {
+  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
+  reply('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91%20FACEBOOK.ehi' }, fileName : '⚡🅚🅑 FACEBOOK.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'yehi': {
+  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91%20Youtube.ehi' }, fileName : '⚡🅚🅑 Youtube.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'ttehi': {
+  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Tiktok.ehi' }, fileName : '⚡🅚🅑Tiktok.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'twehi': {
+  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Twitter.ehi' }, fileName : '⚡🅚🅑Twitter.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'wehi': {
+  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Whatsapp.ehi' }, fileName : '⚡🅚🅑Whatsapp.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
             default:
