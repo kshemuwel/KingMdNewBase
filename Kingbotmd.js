@@ -1164,6 +1164,7 @@ break
                 for (let i of search.all) {
                     teks += `🔥 No : ${no++}\n🔥 Type : ${i.type}\n🔥 Video ID : ${i.videoId}\n🔥 Title : ${i.title}\n🔥 Views : ${i.views}\n🔥 Duration : ${i.timestamp}\n🔥 Uploaded On : ${i.ago}\n🔥 Author : ${i.author.name}\n🔥 Url : ${i.url}\n\n─────────────────\n\n`
                 }
+                KingmdWH.sendMessage(from, { react: { text: "🔎", key: m.key }})
                 KingmdWH.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
                 break
@@ -1250,6 +1251,7 @@ break
                     buttons: buttons,
                     headerType: 4
                 }
+                KingmdWH.sendMessage(from, { react: { text: "📥", key: m.key }})
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
@@ -1307,6 +1309,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     buttons: buttons,
                     headerType: 4
                 }
+                KingmdWH.sendMessage(from, { react: { text: "📥", key: m.key }})
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
@@ -2172,8 +2175,24 @@ case 'antispam': {
 
   }
   break
-  case 'testehi': {
+  case 'httpapk': {
+  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector.apk?raw=true' }, fileName : 'HTTP Injector.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'httplapk': {
+  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector%20lite.apk' }, fileName : 'HTTP Injector lite.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'sksapk': {
+  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/Socks%20HTTP.apk' }, fileName : 'Socks HTTP.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
+  }
+  break
+  case 'tslapk': {
+  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/TLS%20Tunnel%20.apk' }, fileName : 'TLS Tunnel.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
             default:
