@@ -449,11 +449,11 @@ message: {
 	
 	//group target \\
 const reply = (teks) => {
-           KingmdWH.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+           KingmdWH.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./src/logo.jpeg`),"sourceUrl": `https://telegra.ph/file/24b9b8507613125d34bd1.jpg`}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            KingmdWH.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `${linkz}`}}}, { quoted: m})
+            KingmdWH.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": `${ownername}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./XeonMedia/theme/cheemspic.jpg`),"sourceUrl": `https://chat.whatsapp.com/KNXP4fcK8ehJsdPlsM97wr`}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -461,10 +461,15 @@ const reply = (teks) => {
             if (!m.key.fromMe) return
         }
 
-        //Push Message To Console && Auto Read\\
-        if (m.message) {
-            console.log(chalk.black(chalk.bgWhite('[ MESSAGE ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> From'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> In'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
-        }
+console.log(chalk.blueBright.italic('✅ Login information updated!')
+console.log(chalk.blueBright.italic('🎲LOGIN TO YOUR ACCOUNT'))
+console.log(chalk.blueBright.italic('[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] PUBLIC'))
+console.log(chalk.green.bold('✅ Login successful!')
+console.log(chalk.blueBright.italic('⬇️ Installing external plugins...')
+console.log(chalk.green.bold('✅ Plugins installed!')
+console.log(chalk.green.bold('✅ Connected!')
+
+
 	
 	//reset limit every 12 hours\\
         let cron = require('node-cron')
@@ -2654,7 +2659,7 @@ fs.writeFileSync('./database/autostickpc.json', JSON.stringify(autosticker))
 reply('autosticker pc deactivated')
 }
 break
-case 'antilinkgc': {
+case 'antilink': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
@@ -9047,7 +9052,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedTemplate: {
                             hydratedContentText: kingmenu,
                             locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./KINGMedia/logo.jpeg')}, 
+                            jpegThumbnail: fs.readFileSync('./src/logo.jpeg')}, 
                             hydratedFooterText: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                             hydratedButtons: [
                         { urlButton: { displayText: '🔥 YOUTUBE 🔥', url: `${myweb}`} }, 
