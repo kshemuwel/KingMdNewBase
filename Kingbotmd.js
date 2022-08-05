@@ -15,6 +15,8 @@ const { Primbon } = require('scrape-primbon')
 const primbon = new Primbon()
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const whitehackers = require('xfarr-api')
+const maker = require('mumaker')
+const textpro = require('./lib/textpro')
 
 //rpg function\\
 const { addInventoriDarah, cekDuluJoinAdaApaKagaDiJson, addDarah, kurangDarah, getDarah }  = require('./storage/user/darah.js')
@@ -151,8 +153,15 @@ const reply = (teks) => {
         if (!m.key.fromMe) return
     }
 
-console.log('✅ Login information updated!')
-    
+console.log(chalk.blueBright.italic('✅ Login information updated!'))
+console.log(chalk.blueBright.italic('🎲LOGIN TO YOUR ACCOUNT'))
+console.log(chalk.blueBright.italic('[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] PUBLIC'))
+console.log(chalk.green.bold('✅ Login successful!'))
+console.log(chalk.blueBright.italic('⬇️ Installing external plugins...'))
+console.log(chalk.green.bold('✅ Plugins installed!'))
+console.log(chalk.green.bold('✅ Connected!'))
+
+
 //auto set bio
 	if (db.data.settings[botNumber].autobio) {
 	    let setting = global.db.data.settings[botNumber]
@@ -645,14 +654,12 @@ switch(command) {
                 break
                 case 'randomlogo': {
 var unicorn = await getBuffer(picak+`${text}`)
-await KingmdWH.send5ButImg(from, `© Genarated By [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )      }
+await KingmdWH.send5ButImg(from, `© Genarated By [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )      }
 break
 case 'joker': {
 if(!text) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
-maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [`${text}`,])
-  .then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `Made by ${global.botname}` }, { quoted: m }))
-  .catch((err) => console.log(err));    }
+maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [`${text}`,])  .then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m }))  .catch((err) => console.log(err));    }
    break
             case 'tagall': {
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -946,12 +953,12 @@ break
                     let btn = [{
                                 urlButton: {
                                     displayText: '👨‍💻 GITHUB 👨‍💻',
-                                    url: `${sc}`
+                                    url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'
                                 }
                             }, {
                                 urlButton: {
                                     displayText: '🔥 YOUTUBE 🔥',
-                                    url: `${myweb}`
+                                    url: 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -980,12 +987,12 @@ break
 		    let btn = [{
                                 urlButton: {
                                     displayText: '👨‍💻 GITHUB 👨‍💻',
-                                    url: `${sc}`
+                                    url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'
                                 }
                             }, {
                                 urlButton: {
                                     displayText: '🔥 YOUTUBE 🔥',
-                                    url: `${myweb}`
+                                    url: 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1070,8 +1077,7 @@ break
 		for (let res of anu.results) {
 		    let encmedia = await KingmdWH.sendImageAsSticker(m.chat, res.url, m, { packname: global.packname, author: global.author, categories: res.tags })
 		    await fs.unlinkSync(encmedia)
-		}
-	    }
+		}  }
 	    break
             case 'toimage': case 'toimg': {
                 if (!quoted) return reply(`Reply Image`)
@@ -1513,17 +1519,17 @@ Kingbotalive = `─┈┈┈┄┄╌╌╌╌┄┄┈┈┈─
 
       🔰 ꜰᴏʀ 24/7 ʜᴇʟᴘ ᴍꜱɢ ᴍᴇ 🔰`
       
-           let buttons = [
-               {buttonId: `command`, buttonText: {displayText: '☰ LIST MENU ☰'}, type: 1},
-               {buttonId: `ping`, buttonText: {displayText: '🎲 SYSTEM STATUS 🎲'}, type: 1},
-               {buttonId: `kingbotinfo`, buttonText: {displayText: '🍁 BOT SYSTEM 🍁️'}, type: 1},
+                 let buttons = [
+                     { index: 1, urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},
+                     { index: 2, quickReplyButton: { displayText: '☰ LIST MENU ☰', id: 'command'}},
+                     { index: 3, quickReplyButton: { displayText: '🎲 SYSTEM STATUS 🎲', id: 'ping'}},
+                     { index: 4, quickReplyButton: { displayText: '🍁 BOT SYSTEM 🍁️', id: 'kingbotinfo'}}
                 ]
-                
                 let buttonMessage = {
-                    image: fs.readFileSync('./src/alivelogo.jpg'),
-                    caption: Kingbotalive,
+                    image: fs.readFileSync('./src/bot.jpg'),
+                    caption: Kingbotinfo,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
-                    buttons: buttons,
+                    templateButtons: buttons,
                     headerType: 4
                 }
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -1550,7 +1556,7 @@ Kingbotinfo = `
 │🔥 TOTAL USERS :: ${Object.keys(global.db.data.users).length}
 └──────────────❖ `
            let buttons = [
-                     { index: 1, urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: `${sc}`}},
+                     { index: 1, urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},
                      { index: 2, quickReplyButton: { displayText: '☰ LIST MENU ☰', id: 'command'}},
                      { index: 3, quickReplyButton: { displayText: '🍁 SHORT MENU🍁', id: 'shortmenu'}},
                      { index: 4, quickReplyButton: { displayText: '🇱🇰 OWNER 🇱🇰', id: 'owner'}}
@@ -1581,7 +1587,8 @@ kingbotcmd = `╹ 𓄂᳆⃞⃚😈×͜×[🇱🇰㉿𝗜𝗡𝗚 𝗕𝗢𝗧�
 │
 ├ Nᴏɴ MD Bᴏᴛ Rᴇʟᴇᴀꜱᴇᴅ Oɴ
 │2022:04:06
-│
+╰╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶
+╭╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶
 ├ MD Bᴏᴛ Mᴀᴋɪɴɢ Sᴛᴀʀᴛᴇᴅ Oɴ
 │2022:06:20
 │
@@ -1625,8 +1632,8 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             jpegThumbnail: fs.readFileSync('./src/logo.jpeg')}, 
                             hydratedFooterText: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                             hydratedButtons: [
-                        { urlButton: { displayText: '🔥 YOUTUBE 🔥', url: `${myweb}`} }, 
-                        { urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: `${sc}`} }, 
+                        { urlButton: { displayText: '🔥 YOUTUBE 🔥', url: 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'} }, 
+                        { urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'} }, 
                         { quickReplyButton: { displayText: '☰ LIST MENU ☰', id: `${prefix}command`} },
                         { quickReplyButton: { displayText: '🍁 SHORT MENU🍁', id: `${prefix}shortmenu`} },
                         { quickReplyButton: { displayText: '🇱🇰 OWNER 🇱🇰', id: `${prefix}owner`} }  ] } }  }), { userJid: m.chat })
@@ -1669,50 +1676,6 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             KingmdWH.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
             break
-            case 'mainmenurows': {
-Kingbotmenu=`\`\`\`Test Main Rows Menu\`\`\`\n\n\n*</> Coded By White Hackers </>*`
-Kingmainmenufull = `┏━━ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] ━◉
-┠────────────
-┃     「 MAIN MENU 」
-┠────────────
-┃◈ .alive
-┃   ▸ බොට් වැඩද බැලීමට
-┃◈ .git
-┃   ▸ බොට් සෑදීමට ආදාල ලින්න් ලබා ගැනීම
-┃◈ .speedtest
-┃   ▸ බොට්ගෙ වේගය මැනීම
-┃◈ .ping
-┃   ▸ බොටගේ සිස්ටම් විස්තර ලබා ගැනීම
-┃◈ .owner
-┃   ▸ බොට්ගෙ අයිතිකරු ලබා ගැනීම
-┃◈ .menu
-┃   ▸ බොට්ගෙ සම්පූර්ණ මෙනුව ලබා ගැනීම
-┃◈ .delete
-┃   ▸ යැවු පණිවුඩ මකා දැමීම
-┃◈ .bug
-┃   ▸ බොට්ගෙ ඇති අඩුපාඩු පැවසීමට
-┗━━━━━━━━━━━━━◉`
-let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                listMessage :{
-                    title: `👋ʜɪ ᴅᴇᴀʀ ${pushname}`,
-                    description: Kingbotmenu,
-                    buttonText: "ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ꜱᴇʟᴇᴄᴛ ᴍᴇɴᴜ",
-                    footerText: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
-                    listType: "SINGLE_SELECT",
-                    sections: [{ "title": "━━•━━•━━•━━•━━•━━•━━•━━•━━•━━•", "rows": [
-                    { "title": "〘 🎭 〙.ᴀʟɪᴠᴇ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ɢɪᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄʜᴇᴄᴋ ᴋɪɴɢ ʙᴏᴛ ɢɪᴛʜᴜʙ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ꜱᴘᴇᴇᴅᴛᴇꜱᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴘɪɴɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴏᴡɴᴇʀ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ʙᴏᴛ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴍᴇɴᴜ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ꜰᴜʟʟ ᴍᴇɴᴜ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴅᴇʟ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴅᴇʟᴇᴛᴇ ꜱᴇɴᴅᴇᴅ ᴍᴀꜱꜱᴇɢᴇꜱ ꜰʀᴏᴍ ʙᴏᴛ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ʙᴜɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇɴᴅ ʀᴇᴘᴏʀᴛ ᴛᴏ ʙᴏᴛ ᴏᴡɴᴇʀ", "rowId": `test`}, 
-                    { "title": "〘 ⚡ 〙𝚂𝙴𝙴 𝙵𝚄𝙻𝙻 𝙼𝙰𝙸𝙽 𝙼𝙴𝙽𝚄〘 ⚡ 〙", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇᴇ ꜰᴜʟʟ ᴍᴀɪɴ ᴍᴇɴᴜ\n\n\n" + Kingmainmenufull + "", "rowId": `test`}, ]}    ],
-                    listType: 1 } }), {})
-            KingmdWH.relayMessage(m.chat, template.message, { messageId: template.key.id })
-            }
-            break
             case 'ehi': {
             
 Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ🔥
@@ -1720,27 +1683,25 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
 🛑 ᴘᴏᴡᴇʀᴇᴅ ʙʏ :: κιиg οƒƒιϲιαℓ τєαм
 
 
-❌𝙽𝙾 𝚂𝙿𝙰𝙼
-❌𝙽𝙾 𝙳𝙳𝙾𝚂
-❌𝙽𝙾 𝙷𝙰𝙲𝙺𝙸𝙽𝙶
-❌𝙽𝙾 𝙲𝙰𝚁𝙳𝙸𝙽𝙶
-✔️𝙽𝙾 𝚃𝙾𝚁𝚁𝙴𝙽𝚃
-❌𝙽𝚘 𝙾𝚅𝙴𝚁 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳
-❌𝙽𝙾 𝙼𝚄𝙻𝚃𝙸 𝙻𝙾𝙶𝙸𝙽
+❌ 𝙽𝙾 𝚂𝙿𝙰𝙼
+❌ 𝙽𝙾 𝙳𝙳𝙾𝚂
+❌ 𝙽𝙾 𝙷𝙰𝙲𝙺𝙸𝙽𝙶
+❌ 𝙽𝙾 𝙲𝙰𝚁𝙳𝙸𝙽𝙶
+✔️ 𝙽𝙾 𝚃𝙾𝚁𝚁𝙴𝙽𝚃
+❌ 𝙽𝚘 𝙾𝚅𝙴𝚁 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳
+❌ 𝙽𝙾 𝙼𝚄𝙻𝚃𝙸 𝙻𝙾𝙶𝙸𝙽
 
+🍁 ʏᴏᴜ ᴄᴀɴ ɢᴇᴛ,
 
-🔹 𝚈𝙾𝚄𝚃𝚄𝙱𝙴
-🔹 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
-🔹 𝚉𝙾𝙾𝙼
-🔹 𝙸𝙼𝙾
-🔹 𝙽𝙴𝚃𝙵𝙸𝚇
-🔹 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿
+⚡ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴
+⚡ 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺
+⚡ 𝚉𝙾𝙾𝙼
+⚡ 𝙸𝙼𝙾
+⚡ 𝙽𝙴𝚃𝙵𝙸𝚇
+⚡ 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿
 
-
-⚜ ️𝙳𝙸𝙰𝙻𝙾𝙶 0
-⚜️ 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0
-⚜️ 𝙰𝚁𝙸𝚃𝙴𝙻 0
-⚜ ️𝙷𝚄𝚃𝙲𝙷 0
+⚡️ 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0
+⚡️ 𝙰𝚁𝙸𝚃𝙴𝙻 0
 
 
    🔰 ᴀɴʏ ᴡʜᴀᴛꜱᴀᴘᴘ  - .wehi
@@ -1751,14 +1712,12 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
    🔰 ᴀɴʏ ɴᴇᴛꜰʟɪx - .nfehi
    🔰 ᴀɴʏ ɪᴍᴏ - .iehi
 
-   🎲 𝙷𝚄𝚃𝙲𝙷 0 - .h0ehi
-   🎲 𝙳𝙸𝙰𝙻𝙾𝙶 0 - .d0ehi
-   🎲 𝙰𝙸𝚁𝚃𝙴𝙻 0 - .a0ehi
-   🎲 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0 - .m0ehi
+   🔰 𝙰𝙸𝚁𝚃𝙴𝙻 0 - .a0ehi
+   🔰 𝙼𝙾𝙱𝙸𝚃𝙴𝙻 0 - .m0ehi
 
    
 
-◈ ᴇʜɪ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ → 𝐔𝐂𝐇𝐈𝐓𝐇𝐀
+🍁 ᴇʜɪ ᴄʀᴇᴀᴛᴇᴅ ʙʏ :: 𝐔𝐂𝐇𝐈𝐓𝐇𝐀
 
 
 🔥 ᏢᎾᎳᎬᏒᎬᎠ bᎽ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥`
@@ -1795,8 +1754,6 @@ kingbotehiapkmenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᎪᏢᏦ ᏟϴᏞᏞᎬ�
 
 🔥 ᏢᎾᎳᎬᏒᎬᎠ bᎽ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 🔥`
 
-
-
            let buttons = [
                {buttonId: 'kingehiuse', buttonText: {displayText: '🕹️ ️HOW TO USE 🕹️'}, type: 1},
                {buttonId: 'ehi', buttonText: {displayText: '📁 GET EHI 📁'}, type: 1},
@@ -1815,7 +1772,7 @@ kingbotehiapkmenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᎪᏢᏦ ᏟϴᏞᏞᎬ�
                       
                       case 'kingehiuse': {
 
-reply(`👨‍💻Hᴏᴡ Tᴏ Usᴇ Eʜɪ & Sks Fɪʟᴇs👨‍💻
+Ehiusekingbot = `👨‍💻Hᴏᴡ Tᴏ Usᴇ Eʜɪ & Sks Fɪʟᴇs👨‍💻
 
 ❤‍🔥  ᴋɪɴɢ ʙᴏᴛ ᴇʜɪ ᴛᴇᴀᴍ
 
@@ -1870,16 +1827,44 @@ Ex - ( Dialog zoom *Rs- 165  )
 
 🚀බොට්ගෙන් group වල ලින්ක් ඇරන් daily ehi & sks ගන්න.
 
-ᴘᴏᴡᴇʀᴇᴅ ʙʏ : κιиg οƒƒιϲιαℓ τєαм⚡`)
-}
+ᴘᴏᴡᴇʀᴇᴅ ʙʏ : κιиg οƒƒιϲιαℓ τєαм⚡`
 
+         let buttons = [
+                     { index: 1, urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},
+                     { index: 2, quickReplyButton: { displayText: 'I COULD\'ND UNDERSTAND'+'\n\n\nYou Can Contact [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] Owner', id: 'kingbug I could not undestand How to use ehi '}},
+                     { index: 3, quickReplyButton: { displayText: '💝 THANK YOU 💝', id: 'kingbug How to use Ehi Thank you!'}},
+                     { index: 4, quickReplyButton: { displayText: '🇱🇰 OWNER 🇱🇰', id: 'owner'}}
+                ]
+                let buttonMessage = {
+                    image: fs.readFileSync('./src/bot.jpg'),
+                    caption: Kingbotinfo,
+                    footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
+                    templateButtons: buttons,
+                    headerType: 4
+                }
+                KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
            break
-              case 'fb': case 'facebook': {
-                 if (!text) throw ' Query Link!'
-                 m.reply(mess.wait)
-                 let anu = await fetchJson(api('zenz', '/api/downloader/facebook', { url: text }, 'apikey'))
-                 KingmdWH.sendMessage(m.chat, { video: { url: `${anu.result.url}` }, caption: ` *Title* : ${anu.result.title}`}, { quoted: m })
-                           }
+	     case 'fb': case 'facebook': {
+             if (!text) return reply(`Where is the link bro?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+                if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`The link you provided is not valid`)
+            let bocil = require('@bochilteam/scraper')  
+                bocil.facebookdlv2(`${text}`).then(async (data) => {                   
+                    let txt = `*FB DOWNLOADER*\n\n`
+                    txt += `*🍁TITLE :* ${data.title}\n`
+                    txt += `*🍁QUALITY :* ${data.result[0].quality}\n`
+                    txt += `*🍁DESCRIPTION :* ${data.description}\n`
+                    txt += `*🍁ID :* ${watermark}\n`
+                    txt += `*🍁URL :* ${text}\n\n`
+                buf = await getBuffer(data.thumbnail)    
+                KingmdWH.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m })         
+                for (let i of data.result) {     
+                KingmdWH.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, caption: `*🍁 Quality :* ${i.quality}`}, { quoted: m })
+                }          
+                }).catch((err) => {
+                    reply(mess.error)
+                })
+            }
                            break
            case 'shortmenu': {
 
@@ -1893,50 +1878,63 @@ kingbotshortmenu = `
 ┣━〘 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐂𝐌𝐃 〙━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ꜱᴏɴɢ {ꜱᴏɴɢ ɴᴀᴍᴇ}
-┃◈ .ᴠɪᴅᴇᴏ {ᴠɪᴅᴇᴏ ɴᴀᴍᴇ}
+┃⚡ .ꜱᴏɴɢ {ꜱᴏɴɢ ɴᴀᴍᴇ}
+┃⚡ .ᴠɪᴅᴇᴏ {ᴠɪᴅᴇᴏ ɴᴀᴍᴇ}
 ┗━━━━━━━━━━━━━📥
 
 ┏━━━━━━━━━━━━━🔍
 ┣━━〘 𝐒𝐞𝐚𝐫𝐜𝐡 𝐂𝐌𝐃 〙━━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ʏᴛ {ꜱᴇᴀʀᴄʜ ɴᴀᴍᴇ}
-┃◈ .ɪᴍɢ {ᴘʜᴏᴛᴏ ɴᴀᴍᴇ}
+┃⚡ .ʏᴛ {ꜱᴇᴀʀᴄʜ ɴᴀᴍᴇ}
+┃⚡ .ɪᴍɢ {ᴘʜᴏᴛᴏ ɴᴀᴍᴇ}
 ┗━━━━━━━━━━━━━🔎
 
 ┏━━━━━━━━━━━━━‍🪀
 ┣━━〘 𝐆𝐫𝐨𝐮𝐩 𝐂𝐌𝐃 〙━━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ᴋɪᴄᴋ {ʀᴇᴘʟʏ}
-┃◈ .ᴀᴅᴅ {ɴᴜᴍʙᴇʀ}
-┃◈ .ᴍᴜᴛᴇ {ᴄʟᴏꜱᴇ}
-┃◈ .ᴜɴᴍᴜᴛᴇ {ᴏᴘᴇɴ}
-┃◈ .ᴘʀᴏᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
-┃◈ .ᴅᴇᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
+┃⚡ .ᴋɪᴄᴋ {ʀᴇᴘʟʏ}
+┃⚡ .ᴀᴅᴅ {ɴᴜᴍʙᴇʀ}
+┃⚡ .ᴍᴜᴛᴇ {ᴄʟᴏꜱᴇ}
+┃⚡ .ᴜɴᴍᴜᴛᴇ {ᴏᴘᴇɴ}
+┃⚡ .ᴘʀᴏᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
+┃⚡ .ᴅᴇᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
 ┗━━━━━━━━━━━━━🪀
 
 ┏━━━━━━━━━━━━━‍🛠️
 ┣━━〘 𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐂𝐌𝐃 〙━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ꜱᴛɪᴄᴋᴇʀ {ʀᴇᴘʟʏ ᴘʜᴏᴛᴏ}
+┃⚡ .ꜱᴛɪᴄᴋᴇʀ {ʀᴇᴘʟʏ ᴘʜᴏᴛᴏ}
 ┗━━━━━━━━━━━━━🛠️
 
 ┏━━━━━━━━━━━━━‍🍃
 ┣〘 𝐋𝐨𝐠𝐨 𝐌𝐚𝐤𝐢𝐧𝐠 𝐂𝐌𝐃 〙┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ᴊᴏᴋᴇʀ
-┃◈ .ʀᴀɴᴅᴏᴍʟᴏɢᴏ
+┃⚡ .ᴊᴏᴋᴇʀ
+┃⚡ .ʀᴀɴᴅᴏᴍʟᴏɢᴏ
 ┗━━━━━━━━━━━━━🍃
+
+┏━━━━━━━━━━━━━‍🍁
+┣〘 𝐄𝐇𝐈 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐂𝐌𝐃 〙┫
+┣━━━━━━━━━━━━━
+┃
+┃⚡ .ᴇʜɪ
+┃⚡ .ᴇᴀᴘᴋ
+┠─────────────
+┃⚡ .ʜᴛᴛᴘᴀᴘᴋ
+┃⚡ .ʜᴛᴛᴘʟᴀᴘᴋ
+┃⚡ .ꜱᴋꜱᴀᴘᴋ
+┃⚡ .ᴛꜱʟᴀᴘᴋ
+┗━━━━━━━━━━━━━🍁
 
 ┏━━━━━━━━━━━━━‍💫
 ┣━━〘 𝐎𝐭𝐡𝐞𝐫 𝐂𝐌𝐃 〙━━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃◈ .ᴀʟɪᴠᴇ
+┃⚡ .ᴀʟɪᴠᴇ
 ┗━━━━━━━━━━━━━💫`
 
          let buttons = [
@@ -1960,19 +1958,12 @@ kingbotshortmenu = `
             break
                 case 'sc': case 'script': case 'git': case 'github': {
     
-Kingbotgitlink=`*🎭 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS 🎭*
-
-*⧠ Contact Owner ::* https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER࿐
-
-*⧠ Github link ::* https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD
-
-*⧠ King Bot Public Group ::* https://chat.whatsapp.com/KNXP4fcK8ehJsdPlsM97wr
-
-*⧠ My channel link ::* https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw
-
-
-*_🔰 For More Updates Subscribe The Channel 🔰_*`
-
+Kingbotgitlink='*🎭 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS 🎭*\n\n'
++'*⧠ Contact Owner ::* \`\`\`https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER࿐\`\`\`\n\n'
++'*⧠ Github link ::* \`\`\`https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD\`\`\`\n\n'
++'*⧠ King Bot Public Group ::* \`\`\`https://chat.whatsapp.com/KNXP4fcK8ehJsdPlsM97wr\`\`\`\n\n'
++'*⧠ My channel link ::* \`\`\`https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw\`\`\`\n\n\n'
++'*_🔰 For More Updates Subscribe The Channel 🔰_*'
 
 let buttons = [
                {buttonId: `shortmenu`, buttonText: {displayText: '🍁 SHORT MENU 🍁'}, type: 1},
@@ -1989,10 +1980,9 @@ let buttons = [
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
            }
             break
-case 'mainmenu':
-var unicorn = await getBuffer(picak+'Main Menu')
-await KingmdWH.send5ButImg(from, `` + '' + ' ', `
-┏━━ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] ━◉
+case 'mainmenu': {
+Kingbotmenu=`\`\`\`[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮\`\`\`\n\n\n*</> Coded By ШHłТΞ HΛϾКΞЯS </>*`
+Kingmainmenufull = `┏━━ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] ━◉
 ┠────────────
 ┃     「 MAIN MENU 」
 ┠────────────
@@ -2012,7 +2002,27 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃   ▸ යැවු පණිවුඩ මකා දැමීම
 ┃◈ .bug
 ┃   ▸ බොට්ගෙ ඇති අඩුපාඩු පැවසීමට
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`
+let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                listMessage :{
+                    title: `👋ʜɪ ᴅᴇᴀʀ ${pushname}`,
+                    description: Kingbotmenu,
+                    buttonText: "ᴛᴀᴘ ʜᴇʀᴇ ᴛᴏ ꜱᴇʟᴇᴄᴛ ᴍᴇɴᴜ",
+                    footerText: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
+                    listType: "SINGLE_SELECT",
+                    sections: [{ "title": "━━•━━•━━•━━•━━•━━•━━•━━•━━•━━•", "rows": [
+                    { "title": "〘 🎭 〙.ᴀʟɪᴠᴇ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ɢɪᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄʜᴇᴄᴋ ᴋɪɴɢ ʙᴏᴛ ɢɪᴛʜᴜʙ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ꜱᴘᴇᴇᴅᴛᴇꜱᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ᴘɪɴɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ᴏᴡɴᴇʀ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ʙᴏᴛ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ᴍᴇɴᴜ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ꜰᴜʟʟ ᴍᴇɴᴜ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ᴅᴇʟ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴅᴇʟᴇᴛᴇ ꜱᴇɴᴅᴇᴅ ᴍᴀꜱꜱᴇɢᴇꜱ ꜰʀᴏᴍ ʙᴏᴛ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ʙᴜɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇɴᴅ ʀᴇᴘᴏʀᴛ ᴛᴏ ʙᴏᴛ ᴏᴡɴᴇʀ", "rowId": `test`}, 
+                    { "title": "〘 ⚡ 〙𝚂𝙴𝙴 𝙵𝚄𝙻𝙻 𝙼𝙰𝙸𝙽 𝙼𝙴𝙽𝚄〘 ⚡ 〙", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇᴇ ꜰᴜʟʟ ᴍᴀɪɴ ᴍᴇɴᴜ\n\n\n" + Kingmainmenufull + "", "rowId": `test`}, ]}    ],
+                    listType: 1 } }), {})
+            KingmdWH.relayMessage(m.chat, template.message, { messageId: template.key.id })
+            }
 break
 case 'grupmenu': case 'groupmenu':
 var unicorn = await getBuffer(picak+'Group Menu')
@@ -2041,7 +2051,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .upvote
 ┃◈ .checkvote
 ┃◈ .delvote
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'ownermenu':
 var unicorn = await getBuffer(picak+'Owner Menu')
@@ -2069,7 +2079,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .upvote
 ┃◈ .checkvote
 ┃◈ .delvote
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'downloadmenu':
 var unicorn = await getBuffer(picak+'Downloader Menu')
@@ -2081,7 +2091,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .play [query]
 ┃◈ .song [query]
 ┃◈ .img [query]
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'searchmenu':
 var unicorn = await getBuffer(picak+'Search Menu')
@@ -2096,7 +2106,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .wallpaper [query]
 ┃◈ .wikimedia [query]
 ┃◈ .yts [query]
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'convertmenu':
 var unicorn = await getBuffer(picak+'Converter Menu')
@@ -2114,7 +2124,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .tomp3 [reply vn]
 ┃◈ .toaudio [reply vid]
 ┃◈ .toimage [reply stick]
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'voicechangermenu':
 var unicorn = await getBuffer(picak+'Voice Changer Menu')
@@ -2134,7 +2144,7 @@ await KingmdWH.send5ButImg(from, `` + '' + ' ', `
 ┃◈ .robot [reply aud]
 ┃◈ .slow [reply aud]
 ┃◈ .squirrel [reply aud]
-┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+┗━━━━━━━━━━━━━◉`,unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'thanksto': case 'tqto': case 'tqtt':
 var unicorn = await getBuffer(picak+'Developer')
@@ -2163,7 +2173,7 @@ await KingmdWH.send5ButImg(from, `*📡⚙️🔱ҠĪИƓ ßᎾŦ🔱⚙️📡*
 
 ❤ Oᴜʀ Tʜᴀɴᴋꜱ Fᴏʀ Uꜱɪɴɢ Oᴜʀ B️ᴏᴛ ❤️
 
-⚠ ️ᴘᴏᴡᴇʀᴅ ʙʏ κιиg οƒƒιϲιαℓ τєαм ⚠`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": `${myweb}`}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": `${sc}`}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
+⚠ ️ᴘᴏᴡᴇʀᴅ ʙʏ κιиg οƒƒιϲιαℓ τєαм ⚠`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )
 break
 case 'antispam': {
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -2177,21 +2187,25 @@ case 'antispam': {
   break
   case 'httpapk': {
   KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  reply('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector.apk?raw=true' }, fileName : 'HTTP Injector.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'httplapk': {
   KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector%20lite.apk' }, fileName : 'HTTP Injector lite.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'sksapk': {
   KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/Socks%20HTTP.apk' }, fileName : 'Socks HTTP.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'tslapk': {
   KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
+  replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/TLS%20Tunnel%20.apk' }, fileName : 'TLS Tunnel.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
