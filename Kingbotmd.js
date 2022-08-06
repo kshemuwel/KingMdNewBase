@@ -679,7 +679,7 @@ if(!text) return reply(`Use ${prefix + command} text|text`)
 reply(mess.wait)
 teks1 = text.split("|")[0]
 teks2 = text.split("|")[1]
-maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [`${teks1}`,`${teks2}`]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err));
+maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [`${teks1}`,`${teks2}`]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
    break
    case 'glitch3': {
 if(!text) return reply(`Use ${prefix + command} text|text`)
