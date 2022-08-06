@@ -72,8 +72,6 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
             KingmdWH.sendMessage(from, { react: { text: "🛡️", key: m.key }})
             }
             
-                } catch (err) {
-        m.reply(util.format(err))
     }
     
     
