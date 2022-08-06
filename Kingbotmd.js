@@ -176,7 +176,7 @@ console.log(chalk.green.bold('✅ Connected!'))
 //antilink
     if (db.data.chats[m.chat].antilink) {
     if (budy.match(`chat.whatsapp.com`)) {
-    replay('_*⚠️「 ANTI LINK 」⚠️*_\n\n\`\`\`🎭 Gʀᴏᴜᴘ Lɪɴᴋꜱ Aʀᴇ Nᴏᴛ Aʟʟᴏᴡᴇᴅ Iɴ Tʜɪꜱ Gʀᴏᴜᴘ 👿\`\`\`\n👑ᴬɴᵀɪᴳʀᴼᴜᴾ ʟᴵɴᴷ ʙʸ ᴋᴵɴᴳ ʙᴼᴛ👑\n\n\n</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷')
+    replay('_*⚠️「 ANTI LINK 」⚠️*_\n\n\`\`\`🎭 Gʀᴏᴜᴘ Lɪɴᴋꜱ Aʀᴇ Nᴏᴛ Aʟʟᴏᴡᴇᴅ Iɴ Tʜɪꜱ Gʀᴏᴜᴘ 👿\`\`\`\n👑 🅰︎ⁿᵗⁱᵍʳᵒᵘᵖ 🅻︎ⁱⁿᵏ ʙʏ 🅚︎🅘︎🅝︎🅖︎ 🅱︎ᵒᵗ 👑\n\n\n</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷')
     if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
     let gclink = (`https://chat.whatsapp.com/`+await KingmdWH.groupInviteCode(m.chat))
     let isLinkThisGc = new RegExp(gclink, 'i')
@@ -997,27 +997,10 @@ break
                 reply(`Sent Broadcast To ${anu.length} Group Chat, Finish Time ${anu.length * 1.5} Seconds`)
                 for (let i of anu) {
                     await sleep(1500)
-                    let btn = [{
-                                urlButton: {
-                                    displayText: '👨‍💻 GITHUB 👨‍💻',
-                                    url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'
-                                }
-                            }, {
-                                urlButton: {
-                                    displayText: '🔥 YOUTUBE 🔥',
-                                    url: 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '📋️ MENU 📋',
-                                    id: 'menu'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '🇱🇰 OWNER 🇱🇰',
-                                    id: 'owner'
-                                }
-                            }]
+                    let btn = [{urlButton: { displayText: '👨‍💻 GITHUB 👨‍💻', url: 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD' } },
+                               { urlButton: { displayText: '🔥 YOUTUBE 🔥', url: 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw' } },
+                               { quickReplyButton: { displayText: '📋️ MENU 📋', id: 'menu' } },
+                               { quickReplyButton: { displayText: '🇱🇰 OWNER 🇱🇰', id: 'owner'} } ]
                       let txt = `「 KING BOT HERE 」\n\n${text}`
                       KingmdWH.send5ButImg(i, txt, KingmdWH.user.name, global.thumb, btn)
                     }
@@ -1278,9 +1261,9 @@ break
                 let search = await yts(text)
                 let kingbotsearch = search.videos[0]
                 let buttons = [
-                    {buttonId: `hsong ${kingbotsearch.url}`, buttonText: {displayText: '🔥 HIGH QUALITY 🔥'}, type: 1},
-                    {buttonId: `msong  ${kingbotsearch.url}`, buttonText: {displayText: '🎲 MEDIUM QUALITY 🎲'}, type: 1},
-                    {buttonId: `id3`, buttonText: {displayText: '✨ ᴍᴏʀᴇ ᴅᴇᴀᴛᴀɪʟꜱ ✨'+'\n\n\n▣ ɪᴅ ➢ '+`${kingbotsearch.videoId}`+'\n▣ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ ➢ '+`${kingbotsearch.description}`+'\n▣ ᴀᴜᴛʜᴏʀ ➢ '+`${kingbotsearch.author.name}`+'\n▣ ᴄʜᴀɴɴᴇʟ ➢ '+`${kingbotsearch.author.url}`}, type: 1}
+                    {buttonId: `audiosong ${kingbotsearch.url}`, buttonText: {displayText: '〔 🔊 〕AUDIO'}, type: 1},
+                    {buttonId: `docsong  ${kingbotsearch.url}`, buttonText: {displayText: '〔 💾 〕 DOCUMENT'}, type: 1},
+                    {buttonId: `id3`, buttonText: {displayText: '✨ MORE DEATAILS ✨'+'\n\n\n▣ ɪᴅ ➢ '+`${kingbotsearch.videoId}`+'\n▣ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ ➢ '+`${kingbotsearch.description}`+'\n▣ ᴀᴜᴛʜᴏʀ ➢ '+`${kingbotsearch.author.name}`+'\n▣ ᴄʜᴀɴɴᴇʟ ➢ '+`${kingbotsearch.author.url}`}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: kingbotsearch.thumbnail },
@@ -1367,10 +1350,10 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'test': {
-            var i = KingmdWH.sendMessage(m.chat, {text:'⚒'})
+           i = KingmdWH.sendMessage(m.chat, {text:'⚒'})
             KingmdWH.sendMessage(from, { react: { text: "📥", key: i.key }})
                   }
-                case 'hsong':  {
+                case 'audiosong':  {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '320kbps'
@@ -1390,13 +1373,11 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     buttons: buttons,
                     headerType: 4
                 }
-
-
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
                 KingmdWH.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
                        break
-	    case 'msong':{
+	    case 'docsong': {
                 let { yta } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
                 let quality = args[1] ? args[1] : '320kbps'
@@ -1411,14 +1392,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 //                    image: fs.readFileSync('./src/sd.jpg'),
                     text: `『 👋 HELLO ${pushname} 』
                     
-*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] ɪs SᴇᴀʀᴄʜɪɴG Yᴏᴜʀ SᴏɴG ✨➾🔎*`,
+*[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] ɪs SᴇᴀʀᴄʜɪɴG Yᴏᴜʀ DᴏᴄᴜᴍᴇɴT ✨➾🔎*`,
                     footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </> ▷',
                     buttons: buttons,
                     headerType: 4
                 }
 
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
-                KingmdWH.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                KingmdWH.sendMessage(m.chat, { document: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
             
@@ -1917,7 +1898,6 @@ case 'mediafire': {
 if (!text) return reply(mess.linkm)
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
 const baby1 = await mediafireDl(text)
-if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
 const result4 = `*MEDIAFIRE DOWNLOADER*
 				
 *Name* : ${baby1[0].nama}
