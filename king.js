@@ -81,7 +81,6 @@ async function startKingmdWH() {
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
         m = smsg(KingmdWH, mek, store)
         require("./Kingbotmd")(KingmdWH, m, chatUpdate, store)
-        require("./Commands/ehi")(KingmdWH, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
