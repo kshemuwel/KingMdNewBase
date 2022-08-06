@@ -17,6 +17,7 @@ const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, 
 const whitehackers = require('xfarr-api')
 const maker = require('mumaker')
 const textpro = require('./lib/textpro')
+const { mediafireDl } = require('./lib/mediafire.js')
 
 //rpg function\\
 const { addInventoriDarah, cekDuluJoinAdaApaKagaDiJson, addDarah, kurangDarah, getDarah }  = require('./storage/user/darah.js')
@@ -154,7 +155,7 @@ const reply = (teks) => {
     }
 
 console.log(chalk.blueBright.italic('✅ Login information updated!'))
-console.log(chalk.blueBright.italic('🎲LOGIN TO YOUR ACCOUNT'))
+console.log(chalk.blueBright.italic('🎲 LOGIN TO YOUR ACCOUNT'))
 console.log(chalk.blueBright.italic('[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] PUBLIC'))
 console.log(chalk.green.bold('✅ Login successful!'))
 console.log(chalk.blueBright.italic('⬇️ Installing external plugins...'))
@@ -651,15 +652,61 @@ switch(command) {
                 } catch (e) {
                 reply(e)
                 }
-                break
-                case 'randomlogo': {
+break
+case 'randomlogo': {
 var unicorn = await getBuffer(picak+`${text}`)
-await KingmdWH.send5ButImg(from, `© Genarated By [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🍜Donate🍜","id": 'donate'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )      }
+await KingmdWH.send5ButImg(from, `© Genarated By [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',unicorn, [{"urlButton": {"displayText": "🔥 YOUTUBE 🔥","url": 'https://youtube.com/channel/UCgwWV1Cya4_gUFKYOQYQtHw'}},{"urlButton": {"displayText": "👨‍💻 GITHUB 👨‍💻","url": 'https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD'}},{"quickReplyButton": {"displayText": "🇱🇰 OWNER 🇱🇰","id": 'owner'}}] )      }
 break
 case 'joker': {
 if(!text) return reply(`Use ${prefix + command} text`)
+replay(mess.wait)
+maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err));    }
+   break
+   case 'glitch': {
+if(!text) return reply(`Use ${prefix + command} text|text`)
+replay(mess.wait)
+teks1 = text.split("|")[0]
+teks2 = text.split("|")[1]
+maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [`${teks1}`,`${teks2}`]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+break
+case 'glitch1': {
+if(!text) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
-maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [`${text}`,])  .then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m }))  .catch((err) => console.log(err));    }
+maker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+   break
+   case 'glitch2': {
+if(!text) return reply(`Use ${prefix + command} text|text`)
+reply(mess.wait)
+teks1 = text.split("|")[0]
+teks2 = text.split("|")[1]
+maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [`${teks1}`,`${teks2}`]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err));
+   break
+   case 'glitch3': {
+if(!text) return reply(`Use ${prefix + command} text|text`)
+reply(mess.wait)
+teks1 = text.split("|")[0]
+teks2 = text.split("|")[1]
+maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [`${teks1}`,`${teks2}`]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+   break
+case '3dbox': {
+if(!text) return reply(`Use ${prefix + command} text`)
+replay(mess.wait)
+maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+break
+case 'pencil': {
+if(!q) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+   break
+   case 'natural': {
+if(!text) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/natural-leaves-text-effect-931.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
+   break 
+case 'carbon': {
+if(!text) return reply(`Use ${prefix + command} text`)
+reply(mess.wait)
+maker.textpro("https://textpro.me/carbon-text-effect-833.html", [`${text}`,]).then((data) => KingmdWH.sendMessage(m.chat, { image: { url: data }, caption: `© Gᴇɴᴀʀᴀᴛᴇᴅ Bʏ [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]` }, { quoted: m })).catch((err) => console.log(err)); }
    break
             case 'tagall': {
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -1319,9 +1366,9 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-            case 'testdelete': {
-            var down = KingmdWH.sendMessage(m.chat, {text:'⚒'})
-            KingmdWH.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: down.quoted.id, participant: m.quoted.sender } })
+            case 'test': {
+            var i = KingmdWH.sendMessage(m.chat, {text:'⚒'})
+            KingmdWH.sendMessage(from, { react: { text: "📥", key: i.key }})
                   }
                 case 'hsong':  {
                 let { yta } = require('./lib/y2mate')
@@ -1496,7 +1543,7 @@ KingmdWH.sendMessage(m.chat, {text:'💖 Yᴏᴜ\'ʀᴇ Wᴇʟᴄᴏᴍᴇ'})
                     }
             break
                      case 'alive': {
-          KingmdWH.sendMessage(from, { react: { text: "💝", key: m.key }})
+          KingmdWH.sendMessage(from, { react: { text: "👋", key: m.key }})
 Kingbotalive = `─┈┈┈┄┄╌╌╌╌┄┄┈┈┈─
                    ✦𝙷𝙸 𝚃𝙷𝙴𝚁𝙴,࿐
             ꧁°•ɪ ᴀᴍ ᴀʟɪᴠᴇ ɴᴏᴡ•°꧂
@@ -1568,6 +1615,7 @@ Kingbotinfo = `
                     templateButtons: buttons,
                     headerType: 4
                 }
+                KingmdWH.sendMessage(from, { react: { text: "❄️", key: m.key }})
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
                     break
@@ -1614,10 +1662,12 @@ let buttons = [
                     buttons: buttons,
                     headerType: 4
                 }
+                KingmdWH.sendMessage(from, { react: { text: "⚡", key: m.key }})
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
 break
                   case 'list': case 'menu': case 'panel': case 'help' :{
+                  KingmdWH.sendMessage(from, { react: { text: "💝", key: m.key }})
 
 kingmenu = `┏━━━━━━━━━━━━━━
 ┃    *[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] - MD*
@@ -1645,6 +1695,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 	         	reply('[🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] CONFERMED 2022 |>') }
 	     break
                                 case 'command': {
+                                KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
 Kingbotmenu=`
 ┏━━━━━━━━━━━━━━━
 ┣ 𝙸 𝙰𝙼 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]
@@ -1677,7 +1728,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
             }
             break
             case 'ehi': {
-            
+            KingmdWH.sendMessage(from, { react: { text: "🛡️", key: m.key }})
 Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ🔥
 
 🛑 ᴘᴏᴡᴇʀᴇᴅ ʙʏ :: κιиg οƒƒιϲιαℓ τєαм
@@ -1736,7 +1787,7 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
             }
             break
             case 'eapk': {         
-
+KingmdWH.sendMessage(from, { react: { text: "🛡️", key: m.key }})
 kingbotehiapkmenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᎪᏢᏦ ᏟϴᏞᏞᎬᏟͲᏆϴΝ🔥
 
 🛑 ᴘᴏᴡᴇʀᴇᴅ ʙʏ :::  [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘]™
@@ -1769,7 +1820,7 @@ kingbotehiapkmenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᎪᏢᏦ ᏟϴᏞᏞᎬ�
                       break
                       
                       case 'kingehiuse': {
-
+KingmdWH.sendMessage(from, { react: { text: "🛡️", key: m.key }})
 Ehiusekingbot = `👨‍💻Hᴏᴡ Tᴏ Usᴇ Eʜɪ & Sks Fɪʟᴇs👨‍💻
 
 ❤‍🔥  ᴋɪɴɢ ʙᴏᴛ ᴇʜɪ ᴛᴇᴀᴍ
@@ -1860,14 +1911,26 @@ Ex - ( Dialog zoom *Rs- 165  )
                 KingmdWH.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, caption: `*🍁 Quality :* ${i.quality}`}, { quoted: m })
                 }          
                 }).catch((err) => {
-                    reply(mess.error)
-                })
-            }
+                    reply(mess.error)   }) }
+break
+case 'mediafire': {
+if (!text) return reply(mess.linkm)
+if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
+const baby1 = await mediafireDl(text)
+if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
+const result4 = `*MEDIAFIRE DOWNLOADER*
+				
+*Name* : ${baby1[0].nama}
+*Size* : ${baby1[0].size}
+*Mime* : ${baby1[0].mime}
+*Link* : ${baby1[0].link}`
+reply(`${result4}`)
+KingmdWH.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m }).catch ((err) => reply(mess.error))
+}
                            break
            case 'shortmenu': {
-
-kingbotshortmenu = `
-🎭─────「⚙」─────🎭
+KingmdWH.sendMessage(from, { react: { text: "💖", key: m.key }})
+kingbotshortmenu = `🎭─────「⚙」─────🎭
           ✨ ᴋɪɴɢ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ ✨
 🎭─────「⚙」─────🎭
 
@@ -1876,43 +1939,53 @@ kingbotshortmenu = `
 ┣━〘 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐂𝐌𝐃 〙━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃⚡ .ꜱᴏɴɢ {ꜱᴏɴɢ ɴᴀᴍᴇ}
-┃⚡ .ᴠɪᴅᴇᴏ {ᴠɪᴅᴇᴏ ɴᴀᴍᴇ}
+┃⚡ .ꜱᴏɴɢ  ❲ ꜱᴏɴɢ ɴᴀᴍᴇ ❳
+┃⚡ .ᴠɪᴅᴇᴏ  ❲ ᴠɪᴅᴇᴏ ɴᴀᴍᴇ ❳
+┃⚡ .ꜰʙ  ❲ ʟɪɴᴋ ❳
+┃⚡ .ᴍᴇᴅᴜᴀꜰɪʀᴇ  ❲ ʟɪɴᴋ ❳
 ┗━━━━━━━━━━━━━📥
 
 ┏━━━━━━━━━━━━━🔍
 ┣━━〘 𝐒𝐞𝐚𝐫𝐜𝐡 𝐂𝐌𝐃 〙━━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃⚡ .ʏᴛ {ꜱᴇᴀʀᴄʜ ɴᴀᴍᴇ}
-┃⚡ .ɪᴍɢ {ᴘʜᴏᴛᴏ ɴᴀᴍᴇ}
+┃⚡ .ʏᴛ  ❲ ꜱᴇᴀʀᴄʜ ɴᴀᴍᴇ ❳
+┃⚡ .ɪᴍɢ  ❲ ᴘʜᴏᴛᴏ ɴᴀᴍᴇ ❳
 ┗━━━━━━━━━━━━━🔎
 
 ┏━━━━━━━━━━━━━‍🪀
 ┣━━〘 𝐆𝐫𝐨𝐮𝐩 𝐂𝐌𝐃 〙━━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃⚡ .ᴋɪᴄᴋ {ʀᴇᴘʟʏ}
-┃⚡ .ᴀᴅᴅ {ɴᴜᴍʙᴇʀ}
-┃⚡ .ᴍᴜᴛᴇ {ᴄʟᴏꜱᴇ}
-┃⚡ .ᴜɴᴍᴜᴛᴇ {ᴏᴘᴇɴ}
-┃⚡ .ᴘʀᴏᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
-┃⚡ .ᴅᴇᴍᴏᴛᴇ {ʀᴇᴘʟʏ}
+┃⚡ .ᴋɪᴄᴋ  ❲ ʀᴇᴘʟʏ ❳
+┃⚡ .ᴀᴅᴅ  ❲ ɴᴜᴍʙᴇʀ ❳
+┃⚡ .ᴍᴜᴛᴇ  ❲ ᴄʟᴏꜱᴇ ❳
+┃⚡ .ᴜɴᴍᴜᴛᴇ  ❲ ᴏᴘᴇɴ ❳
+┃⚡ .ᴘʀᴏᴍᴏᴛᴇ  ❲ ʀᴇᴘʟʏ ❳
+┃⚡ .ᴅᴇᴍᴏᴛᴇ  ❲ ʀᴇᴘʟʏ ❳
 ┗━━━━━━━━━━━━━🪀
 
 ┏━━━━━━━━━━━━━‍🛠️
 ┣━━〘 𝐂𝐨𝐧𝐯𝐞𝐫𝐭 𝐂𝐌𝐃 〙━┫
 ┣━━━━━━━━━━━━━
 ┃
-┃⚡ .ꜱᴛɪᴄᴋᴇʀ {ʀᴇᴘʟʏ ᴘʜᴏᴛᴏ}
+┃⚡ .ꜱᴛɪᴄᴋᴇʀ  ❲ ʀᴇᴘʟʏ ᴘʜᴏᴛᴏ ❳
 ┗━━━━━━━━━━━━━🛠️
 
 ┏━━━━━━━━━━━━━‍🍃
 ┣〘 𝐋𝐨𝐠𝐨 𝐌𝐚𝐤𝐢𝐧𝐠 𝐂𝐌𝐃 〙┫
 ┣━━━━━━━━━━━━━
 ┃
-┃⚡ .ᴊᴏᴋᴇʀ
-┃⚡ .ʀᴀɴᴅᴏᴍʟᴏɢᴏ
+┃⚡ .ʀᴀɴᴅᴏᴍʟᴏɢᴏ  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ᴊᴏᴋᴇʀ  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ɢɪᴛᴄʜ  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ɢʟɪᴛᴄʜ1  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ɢʟɪᴛᴄʜ2  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ɢʟɪᴛᴄʜ3  ❲ ᴛᴇxᴛ ❳
+┃⚡ .3ᴅʙᴏx  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ᴘᴇɴᴄɪʟ  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ᴄᴀʀʙᴏɴ  ❲ ᴛᴇxᴛ ❳
+┃⚡ .ɴᴀᴛᴜʀᴀʟ  ❲ ᴛᴇxᴛ ❳
 ┗━━━━━━━━━━━━━🍃
 
 ┏━━━━━━━━━━━━━‍🍁
@@ -1926,6 +1999,12 @@ kingbotshortmenu = `
 ┃⚡ .ʜᴛᴛᴘʟᴀᴘᴋ
 ┃⚡ .ꜱᴋꜱᴀᴘᴋ
 ┃⚡ .ᴛꜱʟᴀᴘᴋ
+┠─────────────
+┃⚡ .ᴡᴇʜɪ
+┃⚡ .ʏᴇʜɪ
+┃⚡ .ᴛᴛᴇʜɪ
+┃⚡ .ᴛᴡᴇʜɪ
+┃⚡ .ꜰᴇʜɪ
 ┗━━━━━━━━━━━━━🍁
 
 ┏━━━━━━━━━━━━━‍💫
@@ -1955,8 +2034,8 @@ kingbotshortmenu = `
             }
             break
                 case 'sc': case 'script': case 'git': case 'github': {
-    
-Kingbotgitlink='*🎭 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS 🎭*\n\n'
+    KingmdWH.sendMessage(from, { react: { text: "💝", key: m.key }})
+Kingbotgitlink='*_🎭 [🇱🇰𝚱𝚰𝚴Ｇ 𝛃𝚯𝚪🤘] created by ШHłТΞ HΛϾКΞЯS 🎭_*\n\n'
 +'*⧠ Contact Owner ::* \`\`\`https://wa.me/94729352830?text=HI......%20𝚱𝚰𝚴Ｇ%20𝛃𝚯𝚪%20OWNER࿐\`\`\`\n\n'
 +'*⧠ Github link ::* \`\`\`https://github.com/KING-BOT-OFFICIAL/KING-BOT-MD\`\`\`\n\n'
 +'*⧠ King Bot Public Group ::* \`\`\`https://chat.whatsapp.com/KNXP4fcK8ehJsdPlsM97wr\`\`\`\n\n'
@@ -2009,14 +2088,14 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     footerText: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
                     listType: "SINGLE_SELECT",
                     sections: [{ "title": "━━•━━•━━•━━•━━•━━•━━•━━•━━•━━•", "rows": [
-                    { "title": "〘 🎭 〙.ᴀʟɪᴠᴇ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ɢɪᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄʜᴇᴄᴋ ᴋɪɴɢ ʙᴏᴛ ɢɪᴛʜᴜʙ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ꜱᴘᴇᴇᴅᴛᴇꜱᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴘɪɴɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ ꜱᴛᴀᴛᴜꜱ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴏᴡɴᴇʀ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ʙᴏᴛ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴍᴇɴᴜ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ꜰᴜʟʟ ᴍᴇɴᴜ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ᴅᴇʟ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴅᴇʟᴇᴛᴇ ꜱᴇɴᴅᴇᴅ ᴍᴀꜱꜱᴇɢᴇꜱ ꜰʀᴏᴍ ʙᴏᴛ", "rowId": `test`}, 
-                    { "title": "〘 🎭 〙.ʙᴜɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇɴᴅ ʀᴇᴘᴏʀᴛ ᴛᴏ ʙᴏᴛ ᴏᴡɴᴇʀ", "rowId": `test`}, 
+                    { "title": "〘 🎭 〙.ᴀʟɪᴠᴇ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ", "rowId": `alive`}, 
+                    { "title": "〘 🎭 〙.ɢɪᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄʜᴇᴄᴋ ᴋɪɴɢ ʙᴏᴛ ɢɪᴛʜᴜʙ", "rowId": `git`}, 
+                    { "title": "〘 🎭 〙.ꜱᴘᴇᴇᴅᴛᴇꜱᴛ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ", "rowId": `speedtest`}, 
+                    { "title": "〘 🎭 〙.ᴘɪɴɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴄᴋᴇᴄᴋ ʙᴏᴛ ꜱᴘᴇᴇᴅ ꜱᴛᴀᴛᴜꜱ", "rowId": `ping`}, 
+                    { "title": "〘 🎭 〙.ᴏᴡɴᴇʀ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ʙᴏᴛ ᴏᴡɴᴇʀ ɴᴜᴍʙᴇʀ", "rowId": `owner`}, 
+                    { "title": "〘 🎭 〙.ᴍᴇɴᴜ", "description": "〔 ‍ℹ 〕ᴛᴏ ɢᴇᴛ ꜰᴜʟʟ ᴍᴇɴᴜ", "rowId": `menu`}, 
+                    { "title": "〘 🎭 〙.ᴅᴇʟ", "description": "〔 ‍ℹ 〕ᴛᴏ ᴅᴇʟᴇᴛᴇ ꜱᴇɴᴅᴇᴅ ᴍᴀꜱꜱᴇɢᴇꜱ ꜰʀᴏᴍ ʙᴏᴛ", "rowId": `del`}, 
+                    { "title": "〘 🎭 〙.ʙᴜɢ", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇɴᴅ ʀᴇᴘᴏʀᴛ ᴛᴏ ʙᴏᴛ ᴏᴡɴᴇʀ", "rowId": `bug Main Menu Bug Cmd`}, 
                     { "title": "〘 ⚡ 〙𝚂𝙴𝙴 𝙵𝚄𝙻𝙻 𝙼𝙰𝙸𝙽 𝙼𝙴𝙽𝚄〘 ⚡ 〙", "description": "〔 ‍ℹ 〕ᴛᴏ ꜱᴇᴇ ꜰᴜʟʟ ᴍᴀɪɴ ᴍᴇɴᴜ\n\n\n" + Kingmainmenufull + "", "rowId": `test`}, ]}    ],
                     listType: 1 } }), {})
             KingmdWH.relayMessage(m.chat, template.message, { messageId: template.key.id })
@@ -2184,55 +2263,46 @@ case 'antispam': {
   }
   break
   case 'httpapk': {
-  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   reply('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector.apk?raw=true' }, fileName : 'HTTP Injector.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'httplapk': {
-  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/HTTP%20Injector%20lite.apk' }, fileName : 'HTTP Injector lite.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'sksapk': {
-  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/Socks%20HTTP.apk' }, fileName : 'Socks HTTP.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'tslapk': {
-  KingmdWH.sendMessage(from, { react: { text: "🎭", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ᴀᴘᴋ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/TLS%20Tunnel%20.apk' }, fileName : 'TLS Tunnel.apk', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'fehi': {
-  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
   reply('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91%20FACEBOOK.ehi' }, fileName : '⚡🅚🅑 FACEBOOK.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'yehi': {
-  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91%20Youtube.ehi' }, fileName : '⚡🅚🅑 Youtube.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'ttehi': {
-  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Tiktok.ehi' }, fileName : '⚡🅚🅑Tiktok.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'twehi': {
-  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Twitter.ehi' }, fileName : '⚡🅚🅑Twitter.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }
   break
   case 'wehi': {
-  KingmdWH.sendMessage(from, { react: { text: "🍁", key: m.key }})
   replay('⏳ ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ...\n📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜ ᴇʜɪ ꜰɪʟᴇ...\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ ₂₀₂₂⚡')
   KingmdWH.sendMessage(m.chat, { document : { url : 'https://github.com/nethsaragimhan/ehi/blob/main/%E2%9A%A1%F0%9F%85%9A%F0%9F%85%91Whatsapp.ehi' }, fileName : '⚡🅚🅑Whatsapp.ehi', mimetype: 'application/octet-stream' }, { quoted : m }).catch ((err) => reply(mess.error))
   }

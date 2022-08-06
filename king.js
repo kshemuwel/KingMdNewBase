@@ -98,15 +98,15 @@ async function startKingmdWH() {
        }
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `${botname}`, lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
        } else if(pea[0].announce == false) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `${botname}`, lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
        } else if (pea[0].restrict == true) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
        } else if (pea[0].restrict == false) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `${botname}`, lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
        } else {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `${botname}`, lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
      }
     })
     
@@ -124,14 +124,14 @@ let docs = pickRandom(documents)
             let metadata = await KingmdWH.groupMetadata(anu.id)
             let participants = anu.participants
             for (let num of participants) {
-                // Get Profile Picture User
+// Get Profile Picture User
                 try {
                     ppuser = await KingmdWH.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-                //Get Profile Picture Group\\
+//Get Profile Picture Group
                 try {
                     ppgroup = await KingmdWH.profilePictureUrl(anu.id, 'image')
                 } catch {
@@ -139,98 +139,59 @@ let docs = pickRandom(documents)
                 }
 
 //welcome\\
-        let nama = await KingmdWH.getName(num)
+let nama = await KingmdWH.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
-XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
-                const xeonbuffer = await getBuffer(ppuser)
-                let xeonName = num
-                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-	            const xmembers = metadata.participants.length
-                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
-   └───────────────┈ ⳹`
-      //if you copy the code value,
-   //dont forget to put my name(Xeon) as credit
-   //you fail to put, i sue you for sure!
+const kingpp = await getBuffer(ppuser)
+let kingName = num
+const kingtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+const kingdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+const kingmembers = metadata.participants.length
+	            
+welcomeking = `👋𝗛𝗶 𝐁𝐫𝐨 @${kingName.split("@")[0]},
+
+𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ${metadata.subject} 𝐆𝐫𝐨𝐮𝐩.
+𝐘𝐨𝐮 𝐀𝐫𝐞 ${kingmembers}𝐭𝐡 𝐌𝐞𝐦𝐛𝐞𝐫 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩.
+
+𝐃𝐚𝐭𝐞 -> ${kingdate}
+𝐓𝐢𝐦𝐞 -> ${kingtime}`
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
+{buttonId: `welcome`, buttonText: {displayText: 'WELCOME'}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-mimetype: docs,
-jpegThumbnail:XeonWlcm,
-mentions: [num],
-fileName: `${metadata.subject}`,
-fileLength: 99999999999999,
-caption: xeonbody,
-footer: `${botname}`,
+image: kingpp,
+caption: welcomeking,
+footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
 buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `Don't forget to read group description`,
-mediaType:2,
-thumbnail: XeonWlcm,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
+headerType: 4
 }}
-}
-KingmdWH.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+KingmdWH.sendMessage(anu.id, buttonMessage)
+
                 } else if (anu.action == 'remove') {
-                	const xeonbuffer = await getBuffer(ppuser)
-                    const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-                	let xeonName = num
-                    const xeonmembers = metadata.participants.length
-                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
-   └───────────────┈ ⳹`
-      //if you copy the code value,
-   //dont forget to put my name(Xeon) as credit
-   //you fail to put, i sue you for sure!
+                	const kingpp = await getBuffer(ppuser)
+                    const kingtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	                const kingdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                	let kingName = num
+                    const kingmembers = metadata.participants.length
+                    goodbyeking = `👋𝐆𝐎𝐎𝐃 𝐁𝐘𝐄 𝐁𝐫𝐨,
+                    
+@${kingName.split("@")[0]} 𝐋𝐞𝐟𝐭 𝐅𝐫𝐨𝐦 ${metadata.subject}
+𝐍𝐨𝐰 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 ${kingmembers} 𝐌𝐞𝐦𝐛𝐞𝐫𝐬
+𝐃𝐚𝐭𝐞 -> ${kingdate}
+𝐓𝐢𝐦𝐞 -> ${kingtime}`
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
+{buttonId: `goodbye`, buttonText: {displayText: 'GOODBYE'}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-mimetype: docs,
-jpegThumbnail:XeonLft,
-mentions: [num],
-fileName: `${metadata.subject}`,
-fileLength: 99999999999999,
-caption: xeonbody,
-footer: `${botname}`,
+image: kingpp,
+caption: goodbyeking,
+footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
 buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `Bye! my friend, take care.`,
-mediaType:2,
-thumbnail: XeonLft,
-sourceUrl: `${websitex}`,
-mediaUrl: `${websitex}`
+headerType: 4
 }}
-}
-KingmdWH.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+KingmdWH.sendMessage(anu.id, buttonMessage )
                 }
             }
         } catch (err) {
