@@ -67,7 +67,10 @@ Kingbotehimenu = `🔥ᏦᏆΝᏀ ᏴϴͲ ᎬᎻᏆ ᏟϴᏞᏞᎬᏟͲᏆϴΝ�
                 KingmdWH.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             
-            
+            break
+            case '✦': {
+            KingmdWH.sendMessage(from, { react: { text: "🛡️", key: m.key }})
+            }
             
                 } catch (err) {
         m.reply(util.format(err))
