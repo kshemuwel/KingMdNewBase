@@ -1,5 +1,5 @@
 require('./settings')
-const { default: KingmdWHConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: NexusNwIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
@@ -11,7 +11,6 @@ const path = require('path')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
-const moment = require('moment-timezone')
 
 var low
 try {
@@ -51,21 +50,21 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startKingmdWH() {
-    const KingmdWH = KingmdWHConnect({
+    const KingmdWH = NexusNwIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Subscribe Xeon','Safari','1.0.0'],
+        browser: ['KING BOT MD\WHITE HACKERS','Safari','1.0.0'],
         auth: state
     })
 
     store.bind(KingmdWH.ev)
     
-    // anticall auto block
+// anticall auto block
     KingmdWH.ws.on('CB:call', async (json) => {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
-    let xeonfek = await KingmdWH.sendContact(callerId, global.owner)
-    KingmdWH.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : xeonfek })
+    let pa7rick = await KingmdWH.sendContact(callerId, global.owner)
+    KingmdWH.sendMessage(callerId, { text: `Automatic Block System!\nDon't Call Bot!\nPlease Ask Or Contact The Owner To Unblock You!`}, { quoted : pa7rick })
     await sleep(8000)
     await KingmdWH.updateBlockStatus(callerId, "block")
     }
@@ -96,27 +95,19 @@ async function startKingmdWH() {
        } catch {
        ppgc = 'https://shortlink.KingmdWHarridho.my.id/rg1oT'
        }
-       let lolXeon = { url : ppgc }
+       let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`, wm_fatih, [])
        } else if(pea[0].announce == false) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`, wm_fatih, [])
        } else if (pea[0].restrict == true) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`, wm_fatih, [])
        } else if (pea[0].restrict == false) {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`, wm_fatih, [])
        } else {
-       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷', lolXeon, [])
+       KingmdWH.send5ButImg(pea[0].id, `「 Group Settings Changed 」\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷`, wm_fatih, [])
      }
     })
-    
-    //randoming function
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-//document randomizer
-let documents = [doc1,doc2,doc3,doc4,doc5,doc6]
-let docs = pickRandom(documents)
 
     KingmdWH.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
@@ -124,74 +115,39 @@ let docs = pickRandom(documents)
             let metadata = await KingmdWH.groupMetadata(anu.id)
             let participants = anu.participants
             for (let num of participants) {
-// Get Profile Picture User
+                // Get Profile Picture User
                 try {
                     ppuser = await KingmdWH.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-//Get Profile Picture Group
+                //Get Profile Picture Group\\
                 try {
                     ppgroup = await KingmdWH.profilePictureUrl(anu.id, 'image')
                 } catch {
                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-//welcome\\
-let nama = await KingmdWH.getName(num)
+//welcome
+        let nama = await KingmdWH.getName(num)
 memb = metadata.participants.length
+
+Kingbotwelcome = await getBuffer(`${ppuser}`)
+
+Kingbotgoodbye = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
-const kingpp = await getBuffer(ppuser)
-let kingName = num
-const kingtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-const kingdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-const kingmembers = metadata.participants.length
-	            
-welcomeking = `👋𝗛𝗶 𝐁𝐫𝐨 @${kingName.split("@")[0]},
+                    KingmdWH.sendMessage(anu.id, { image: Kingbotwelcome, contextInfo: { mentionedJid: [num] }, caption: `
+⭐ Hi👋 @${num.split("@")[0]},
+⭐ Welcome To ${metadata.subject}
 
-𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ${metadata.subject} 𝐆𝐫𝐨𝐮𝐩.
-𝐘𝐨𝐮 𝐀𝐫𝐞 ${kingmembers}𝐭𝐡 𝐌𝐞𝐦𝐛𝐞𝐫 𝐈𝐧 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩.
+⭐ Description: ${metadata.desc}
 
-𝐃𝐚𝐭𝐞 -> ${kingdate}
-𝐓𝐢𝐦𝐞 -> ${kingtime}`
-let buttons = [
-{buttonId: `welcome`, buttonText: {displayText: 'WELCOME'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}
-]
-let buttonMessage = {
-image: kingpp,
-caption: welcomeking,
-footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
-buttons: buttons,
-headerType: 4
-}}
-KingmdWH.sendMessage(anu.id, buttonMessage)
-
+⭐ Welcome To Our Comfortable Happy😋, Sometimes Loud😜, Usually Messy🤥, Full Of Love🥰, HOME😌!!`} )
                 } else if (anu.action == 'remove') {
-                	const kingpp = await getBuffer(ppuser)
-                    const kingtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	                const kingdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-                	let kingName = num
-                    const kingmembers = metadata.participants.length
-                    goodbyeking = `👋𝐆𝐎𝐎𝐃 𝐁𝐘𝐄 𝐁𝐫𝐨,
-                    
-@${kingName.split("@")[0]} 𝐋𝐞𝐟𝐭 𝐅𝐫𝐨𝐦 ${metadata.subject}
-𝐍𝐨𝐰 𝐈𝐧 𝐆𝐫𝐨𝐮𝐩 ${kingmembers} 𝐌𝐞𝐦𝐛𝐞𝐫𝐬
-𝐃𝐚𝐭𝐞 -> ${kingdate}
-𝐓𝐢𝐦𝐞 -> ${kingtime}`
-let buttons = [
-{buttonId: `goodbye`, buttonText: {displayText: 'GOODBYE'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1}
-]
-let buttonMessage = {
-image: kingpp,
-caption: goodbyeking,
-footer: '</> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴋɪɴɢ ʙᴏᴛ </>️ ▷',
-buttons: buttons,
-headerType: 4
-}}
-KingmdWH.sendMessage(anu.id, buttonMessage )
+                    KingmdWH.sendMessage(anu.id, { image: Kingbotgoodbye, contextInfo: { mentionedJid: [num] }, caption: `⭐ @${num.split("@")[0]} Left ${metadata.subject}
+
+⭐ I'm Not Sure If It Was A Goodbye Charm, But It Was Fun While It Lasted 😌✨` })
                 }
             }
         } catch (err) {
@@ -238,8 +194,7 @@ KingmdWH.sendMessage(anu.id, buttonMessage )
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await KingmdWH.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await KingmdWH.getName(i + '@s.whatsapp.net')}\nFN:${global.ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${global.ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${global.socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${global.location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
-	    	////////////////////////////////////////////////////////////vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:${botscript}\nitem2.X-ABLabel:Script\nitem3.URL:${websitex}\nitem3.X-ABLabel:Script\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:${sc}\nitem2.X-ABLabel:Script\nitem3.URL:${myweb}\nitem3.X-ABLabel:Script\nitem4.ADR:;;${region};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	KingmdWH.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
@@ -270,14 +225,14 @@ KingmdWH.sendMessage(anu.id, buttonMessage )
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-            if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); KingmdWH.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🦄Connection closed, reconnecting...."); startKingmdWH(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🦄Connection Lost from Server, reconnecting..."); startKingmdWH(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🦄Connection Replaced, Another New Session Opened, Please Close Current Session First"); KingmdWH.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🦄Device Logged Out, Please Scan Again And Run.`); KingmdWH.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🦄Restart Required, Restarting..."); startKingmdWH(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🦄Connection TimedOut, Reconnecting..."); startKingmdWH(); }
-            else KingmdWH.end(`🦄Unknown DisconnectReason: ${reason}|${connection}`)
+            if (reason === DisconnectReason.badSession) { console.log(`🇱🇰 Bad Session File, Please Delete Session and Scan Again`); KingmdWH.logout(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("🇱🇰 Connection closed, reconnecting...."); startKingmdWH(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("🇱🇰 Connection Lost from Server, reconnecting..."); startKingmdWH(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("🇱🇰 Connection Replaced, Another New Session Opened, Please Close Current Session First"); KingmdWH.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`🇱🇰 Device Logged Out, Please Scan Again And Run.`); KingmdWH.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("🇱🇰 Restart Required, Restarting..."); startKingmdWH(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("🇱🇰 Connection TimedOut, Reconnecting..."); startKingmdWH(); }
+            else KingmdWH.end(`🇱🇰 Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
     })
@@ -571,83 +526,6 @@ KingmdWH.sendMessage(anu.id, buttonMessage )
 		copy.key.fromMe = sender === KingmdWH.user.id
 
         return proto.WebMessageInfo.fromObject(copy)
-    }
-
-
-//send 5 button image by xeon
-    KingmdWH.send5ButImg = async (jid , text = '' , footer = '', img, but = [], thumb, options = {}) =>{
-        let message = await prepareWAMessageMedia({ image: img, jpegThumbnail:thumb }, { upload: KingmdWH.waUploadToServer })
-        var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-        templateMessage: {
-        hydratedTemplate: {
-        imageMessage: message.imageMessage,
-               "hydratedContentText": text,
-               "hydratedFooterText": footer,
-               "hydratedButtons": but
-            }
-            }
-            }), options)
-            KingmdWH.relayMessage(jid, template.message, { messageId: template.key.id })
-    }
-
-
-    //send5butvid by xeon
-        KingmdWH.send5ButVid = async (jid , text = '' , footer = '', vid, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ video: vid }, { upload: KingmdWH.waUploadToServer })
-        var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
-        templateMessage: {
-        hydratedTemplate: {
-        videoMessage: message.videoMessage,
-               "hydratedContentText": text,
-               "hydratedFooterText": footer,
-               "hydratedButtons": but
-            }
-            }
-            }), options)
-            KingmdWH.relayMessage(jid, template.message, { messageId: template.key.id })
-    }
-    
-    
-    //send5butmsg by xeon
-            KingmdWH.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
-        let templateButtons = but
-        var templateMessage = {
-        text: text,
-        footer: footer,
-        templateButtons: templateButtons
-        }
-        KingmdWH.sendMessage(jid, templateMessage)
-        }
-
-
-//sendlistmsg by xeon
-        KingmdWH.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
-        let sections = sects
-        var listMes = {
-        text: text,
-        footer: footer,
-        title: title,
-        buttonText: butText,
-        sections
-        }
-        KingmdWH.sendMessage(jid, listMes, { quoted: quoted })
-        }
-
-
-    //send5butgif by xeon
-        KingmdWH.send5ButGif = async (jid , text = '' , footer = '', gif, but = [], options = {}) =>{
-        let message = await prepareWAMessageMedia({ video: gif, gifPlayback: true }, { upload: KingmdWH.waUploadToServer })
-        var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
-        templateMessage: {
-        hydratedTemplate: {
-        videoMessage: message.videoMessage,
-               "hydratedContentText": text,
-               "hydratedFooterText": footer,
-               "hydratedButtons": but
-            }
-            }
-            }), options)
-            KingmdWH.relayMessage(jid, template.message, { messageId: template.key.id })
     }
 
 
